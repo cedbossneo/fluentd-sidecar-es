@@ -42,4 +42,4 @@ COPY td-agent.conf /etc/td-agent/td-agent.conf
 # Run the config generator to get the config files in place and start Fluentd.
 # We have to run the config generator at runtime rather than now so that it can
 # incorporate the files provided in the environment variable in its config.
-CMD /usr/local/sbin/config_generator.sh && /usr/sbin/td-agent -qq --use-v1-config --suppress-repeated-stacktrace > /var/log/td-agent/td-agent.log
+CMD /usr/local/sbin/config_generator.sh && /usr/sbin/td-agent --use-v1-config
