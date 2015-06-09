@@ -30,7 +30,7 @@ do
   format1 /^(?<time>\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} )(?<severity>[^ \-]*)[\-\ ]{2,3}(?<message>[^\n]*)[\n]{0,1}(?<stacktrace>^.+Exception[^\n]+(\s+at .+)+)*(?<other>.*)/
   time_key time
   path ${filepath}
-  pos_file ${filepath}.pos
+  pos_file /etc/td-agent/fluentd-es.log.pos
   time_format %Y/%m/%d %H:%M:%S
   tag bone.$CUSTOMER
   read_from_head true
